@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="igroup199_prodModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AidComplexes">
+    <Key>
+      <PropertyRef Name="AidComplexesKey" />
+      <PropertyRef Name="OptionsKey" />
+    </Key>
+    <Property Name="AidComplexesKey" Type="int" Nullable="false" />
+    <Property Name="OptionsKey" Type="int" Nullable="false" />
+    <Property Name="AidComplexesOpenHours" Type="nchar" MaxLength="10" />
+    <Property Name="AidComplexesPhone" Type="bigint" />
+    <Property Name="AidComplexesName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AidComplexesLocationCountry" Type="nvarchar" MaxLength="30" />
+    <Property Name="AidComplexesLongitude" Type="real" />
+    <Property Name="AidComplexesLatitude" Type="real" />
+    <Property Name="AidComplexesFinallandmark" Type="real" />
+    <Property Name="AidComplexesPersona" Type="nchar" MaxLength="30" />
+    <Property Name="AidComplexesDescription" Type="nchar" MaxLength="400" />
+    <Property Name="AidComplexesPhoto" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Attractions">
+    <Key>
+      <PropertyRef Name="AttractionsKey" />
+      <PropertyRef Name="OptionsKey" />
+    </Key>
+    <Property Name="AttractionsKey" Type="int" Nullable="false" />
+    <Property Name="OptionsKey" Type="int" Nullable="false" />
+    <Property Name="KindOfAttraction" Type="nvarchar" MaxLength="40" />
+    <Property Name="AttractionsTimeInMinutes" Type="int" Nullable="false" />
+    <Property Name="AttractionsCost" Type="int" Nullable="false" />
+    <Property Name="NumberOfRepeatAttractions" Type="int" Nullable="false" />
+    <Property Name="AttractionsName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AttractionsLocationCountry" Type="nvarchar" MaxLength="30" />
+    <Property Name="AttractionsRegionOfTheCountry" Type="nvarchar" MaxLength="30" />
+    <Property Name="AttractionsLongitude" Type="real" />
+    <Property Name="AttractionsLatitude" Type="real" />
+    <Property Name="AttractionsFinallandmark" Type="real" />
+    <Property Name="AttractionsPersona" Type="nchar" MaxLength="30" />
+    <Property Name="AttractionDescription" Type="nchar" MaxLength="400" />
+    <Property Name="AttractionPhoto" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Chapter">
+    <Key>
+      <PropertyRef Name="ChapterKey" />
+    </Key>
+    <Property Name="NameOfChapter" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="TravelDiaryKey" Type="int" Nullable="false" />
+    <Property Name="ChapterDescription" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="ChapterPictures" Type="nvarchar(max)" />
+    <Property Name="ChapterDate" Type="date" />
+    <Property Name="ChapterTime" Type="time" Precision="7" />
+    <Property Name="ChapterKey" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Countries">
+    <Key>
+      <PropertyRef Name="CountryName" />
+    </Key>
+    <Property Name="CountryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CountryMainland" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="CountryLat" Type="real" />
+    <Property Name="CountryLon" Type="real" />
+  </EntityType>
+  <EntityType Name="Expenses">
+    <Key>
+      <PropertyRef Name="ExpensesKey" />
+    </Key>
+    <Property Name="ExpensesKey" Type="int" Nullable="false" />
+    <Property Name="UserEmail" Type="nvarchar" MaxLength="30" />
+    <Property Name="KindOfExpenses" Type="nvarchar" MaxLength="30" />
+    <Property Name="ExpensesTitle" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="PricePerOne" Type="int" Nullable="false" />
+    <Property Name="NumberOfRepeatExpenses" Type="int" Nullable="false" />
+    <Property Name="TotalPriceToPay" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Feedback">
+    <Key>
+      <PropertyRef Name="FeedbackKey" />
+    </Key>
+    <Property Name="FeedbackKey" Type="int" Nullable="false" />
+    <Property Name="KindOfFeedback" Type="nvarchar" MaxLength="30" />
+    <Property Name="FeedbackDescription" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="FeedbackLongitude" Type="real" />
+    <Property Name="FeedbackLatitude" Type="real" />
+    <Property Name="FeedbackCountry" Type="nvarchar" MaxLength="100" />
+    <Property Name="FeedbackRegionOfTheCountry" Type="nvarchar" MaxLength="100" />
+    <Property Name="FeedbackTitle" Type="nchar" MaxLength="40" />
+    <Property Name="FeedbackPhoto" Type="nvarchar(max)" />
+    <Property Name="FeedbackPersona" Type="nchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="ForFevPerUser">
+    <Key>
+      <PropertyRef Name="Fkey" />
+    </Key>
+    <Property Name="Fkey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fname" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fcontry" Type="nvarchar" MaxLength="50" />
+    <Property Name="Flat" Type="real" />
+    <Property Name="Flot" Type="real" />
+    <Property Name="Fdescription" Type="nchar" MaxLength="400" />
+    <Property Name="Fphoto" Type="nvarchar(max)" />
+    <Property Name="Fuseremail" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Options">
+    <Key>
+      <PropertyRef Name="OptionsKey" />
+    </Key>
+    <Property Name="OptionsKey" Type="int" Nullable="false" />
+    <Property Name="FavouritesKey" Type="int" />
+    <Property Name="OptionsLikeDislike" Type="char" MaxLength="1" />
+    <Property Name="OptionName" Type="nvarchar" MaxLength="100" />
+    <Property Name="OptionLocationCountry" Type="nvarchar" MaxLength="100" />
+    <Property Name="OptionsRegionOfTheCountry" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="RegionOfTheCountry">
+    <Key>
+      <PropertyRef Name="RegionOfTheCountryKey" />
+      <PropertyRef Name="RegionOfTheCountry" />
+    </Key>
+    <Property Name="RegionOfTheCountryKey" Type="int" Nullable="false" />
+    <Property Name="CountryName" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegionOfTheCountry" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="RegionOfTheCountryLat" Type="real" />
+    <Property Name="RegionOfTheCountryLon" Type="real" />
+  </EntityType>
+  <EntityType Name="SelectedBy">
+    <Key>
+      <PropertyRef Name="UserEmail" />
+    </Key>
+    <Property Name="OptionsKey" Type="int" Nullable="false" />
+    <Property Name="FeedbackKey" Type="int" Nullable="false" />
+    <Property Name="UserEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CountryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SleepingComplexes">
+    <Key>
+      <PropertyRef Name="SleepingComplexesKey" />
+      <PropertyRef Name="OptionsKey" />
+    </Key>
+    <Property Name="SleepingComplexesKey" Type="int" Nullable="false" />
+    <Property Name="OptionsKey" Type="int" Nullable="false" />
+    <Property Name="SleepingComplexesCost" Type="int" Nullable="false" />
+    <Property Name="NumberOfNightsSleepingComplexes" Type="int" Nullable="false" />
+    <Property Name="SleepingComplexesName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SleepingComplexesLocationCountry" Type="nvarchar" MaxLength="30" />
+    <Property Name="SleepingComplexesRegionOfTheCountry" Type="nvarchar" MaxLength="30" />
+    <Property Name="SleepingComplexesLongitude" Type="real" />
+    <Property Name="SleepingComplexesLatitude" Type="real" />
+    <Property Name="SleepingComplexesFinallandmark" Type="real" />
+    <Property Name="SleepingComplexesPersona" Type="nchar" MaxLength="30" />
+    <Property Name="SleepingComplexesDescription" Type="nchar" MaxLength="400" />
+    <Property Name="SleepingComplexesPhoto" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TalkWith">
+    <Key>
+      <PropertyRef Name="UserEmail1" />
+      <PropertyRef Name="UserEmail2" />
+    </Key>
+    <Property Name="UserEmail1" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserEmail2" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ChatDate" Type="datetime" Nullable="false" />
+    <Property Name="ChatTime" Type="time" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TravelDiary">
+    <Key>
+      <PropertyRef Name="TravelDiaryKey" />
+    </Key>
+    <Property Name="TravelDiaryKey" Type="int" Nullable="false" />
+    <Property Name="UserEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumberOfChapters" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Trips">
+    <Key>
+      <PropertyRef Name="TripsKey" />
+      <PropertyRef Name="OptionsKey" />
+    </Key>
+    <Property Name="TripsKey" Type="int" Nullable="false" />
+    <Property Name="OptionsKey" Type="int" Nullable="false" />
+    <Property Name="KindOfTrips" Type="nchar" MaxLength="20" />
+    <Property Name="TripsTimeInMinutes" Type="int" Nullable="false" />
+    <Property Name="TripsCost" Type="int" Nullable="false" />
+    <Property Name="NumberOfRepeatTrips" Type="int" Nullable="false" />
+    <Property Name="TripsName" Type="nvarchar" MaxLength="50" />
+    <Property Name="TripsLocationCountry" Type="nvarchar" MaxLength="30" />
+    <Property Name="TripsRegionOfTheCountry" Type="nvarchar" MaxLength="30" />
+    <Property Name="TripsLongitude" Type="real" />
+    <Property Name="TripsLatitude" Type="real" />
+    <Property Name="TripsFinallandmark" Type="real" />
+    <Property Name="TripsPersona" Type="nchar" MaxLength="30" />
+    <Property Name="TripsDescription" Type="nchar" MaxLength="400" />
+    <Property Name="TripsPhoto" Type="nchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="UserFavourites">
+    <Key>
+      <PropertyRef Name="FavouritesKey" />
+    </Key>
+    <Property Name="FavouritesKey" Type="int" Nullable="false" />
+    <Property Name="UserEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="CountryName" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserFavouritesRegionOfTheCountry" Type="nvarchar" MaxLength="50" />
+    <Property Name="Titel" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="nchar" MaxLength="2000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserEmail" />
+    </Key>
+    <Property Name="UserEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserFirstName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="UserLastName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="NumberOfFriends" Type="int" />
+    <Property Name="UserPhoneNumber" Type="bigint" />
+    <Property Name="UserType" Type="nvarchar" MaxLength="30" />
+    <Property Name="UserPassword" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="UserImg" Type="nvarchar" MaxLength="4000" />
+    <Property Name="UserBudget" Type="real" />
+    <Property Name="UserTimeTraveling" Type="int" />
+    <Property Name="UserLatPosition" Type="real" />
+    <Property Name="UserLotPosition" Type="real" />
+    <Property Name="UserTimeSpan" Type="time" Precision="7" />
+  </EntityType>
+  <EntityType Name="WatchAt">
+    <Key>
+      <PropertyRef Name="UserEmail" />
+      <PropertyRef Name="CountryName" />
+    </Key>
+    <Property Name="UserEmail" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CountryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__AidComple__Optio__3C69FB99">
+    <End Role="Options" Type="Self.Options" Multiplicity="1" />
+    <End Role="AidComplexes" Type="Self.AidComplexes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Options">
+        <PropertyRef Name="OptionsKey" />
+      </Principal>
+      <Dependent Role="AidComplexes">
+        <PropertyRef Name="OptionsKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Attractio__Optio__31EC6D26">
+    <End Role="Options" Type="Self.Options" Multiplicity="1" />
+    <End Role="Attractions" Type="Self.Attractions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Options">
+        <PropertyRef Name="OptionsKey" />
+      </Principal>
+      <Dependent Role="Attractions">
+        <PropertyRef Name="OptionsKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chapter__TravelD__4222D4EF">
+    <End Role="TravelDiary" Type="Self.TravelDiary" Multiplicity="1" />
+    <End Role="Chapter" Type="Self.Chapter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TravelDiary">
+        <PropertyRef Name="TravelDiaryKey" />
+      </Principal>
+      <Dependent Role="Chapter">
+        <PropertyRef Name="TravelDiaryKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Options__Favouri__2E1BDC42">
+    <End Role="UserFavourites" Type="Self.UserFavourites" Multiplicity="0..1" />
+    <End Role="Options" Type="Self.Options" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserFavourites">
+        <PropertyRef Name="FavouritesKey" />
+      </Principal>
+      <Dependent Role="Options">
+        <PropertyRef Name="FavouritesKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RegionOfT__Count__276EDEB3">
+    <End Role="Countries" Type="Self.Countries" Multiplicity="0..1" />
+    <End Role="RegionOfTheCountry" Type="Self.RegionOfTheCountry" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Countries">
+        <PropertyRef Name="CountryName" />
+      </Principal>
+      <Dependent Role="RegionOfTheCountry">
+        <PropertyRef Name="CountryName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SelectedB__Count__52593CB8">
+    <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+    <End Role="SelectedBy" Type="Self.SelectedBy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Countries">
+        <PropertyRef Name="CountryName" />
+      </Principal>
+      <Dependent Role="SelectedBy">
+        <PropertyRef Name="CountryName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SelectedB__Feedb__5070F446">
+    <End Role="Feedback" Type="Self.Feedback" Multiplicity="1" />
+    <End Role="SelectedBy" Type="Self.SelectedBy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Feedback">
+        <PropertyRef Name="FeedbackKey" />
+      </Principal>
+      <Dependent Role="SelectedBy">
+        <PropertyRef Name="FeedbackKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SelectedB__Optio__4F7CD00D">
+    <End Role="Options" Type="Self.Options" Multiplicity="1" />
+    <End Role="SelectedBy" Type="Self.SelectedBy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Options">
+        <PropertyRef Name="OptionsKey" />
+      </Principal>
+      <Dependent Role="SelectedBy">
+        <PropertyRef Name="OptionsKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SelectedB__UserE__5165187F">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="SelectedBy" Type="Self.SelectedBy" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserEmail" />
+      </Principal>
+      <Dependent Role="SelectedBy">
+        <PropertyRef Name="UserEmail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SleepingC__Optio__398D8EEE">
+    <End Role="Options" Type="Self.Options" Multiplicity="1" />
+    <End Role="SleepingComplexes" Type="Self.SleepingComplexes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Options">
+        <PropertyRef Name="OptionsKey" />
+      </Principal>
+      <Dependent Role="SleepingComplexes">
+        <PropertyRef Name="OptionsKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TalkWith__UserEm__5535A963">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="TalkWith" Type="Self.TalkWith" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserEmail" />
+      </Principal>
+      <Dependent Role="TalkWith">
+        <PropertyRef Name="UserEmail1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TalkWith__UserEm__5629CD9C">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="TalkWith" Type="Self.TalkWith" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserEmail" />
+      </Principal>
+      <Dependent Role="TalkWith">
+        <PropertyRef Name="UserEmail2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TravelDia__UserE__3F466844">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="TravelDiary" Type="Self.TravelDiary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserEmail" />
+      </Principal>
+      <Dependent Role="TravelDiary">
+        <PropertyRef Name="UserEmail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Trips__OptionsKe__35BCFE0A">
+    <End Role="Options" Type="Self.Options" Multiplicity="1" />
+    <End Role="Trips" Type="Self.Trips" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Options">
+        <PropertyRef Name="OptionsKey" />
+      </Principal>
+      <Dependent Role="Trips">
+        <PropertyRef Name="OptionsKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UserFavou__Count__2B3F6F97">
+    <End Role="Countries" Type="Self.Countries" Multiplicity="0..1" />
+    <End Role="UserFavourites" Type="Self.UserFavourites" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Countries">
+        <PropertyRef Name="CountryName" />
+      </Principal>
+      <Dependent Role="UserFavourites">
+        <PropertyRef Name="CountryName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__UserFavou__UserE__2A4B4B5E">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="UserFavourites" Type="Self.UserFavourites" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserEmail" />
+      </Principal>
+      <Dependent Role="UserFavourites">
+        <PropertyRef Name="UserEmail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__WatchAt__Country__4CA06362">
+    <End Role="Countries" Type="Self.Countries" Multiplicity="1" />
+    <End Role="WatchAt" Type="Self.WatchAt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Countries">
+        <PropertyRef Name="CountryName" />
+      </Principal>
+      <Dependent Role="WatchAt">
+        <PropertyRef Name="CountryName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__WatchAt__UserEma__4BAC3F29">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="WatchAt" Type="Self.WatchAt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserEmail" />
+      </Principal>
+      <Dependent Role="WatchAt">
+        <PropertyRef Name="UserEmail" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="igroup199_prodModelStoreContainer">
+    <EntitySet Name="AidComplexes" EntityType="Self.AidComplexes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Attractions" EntityType="Self.Attractions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Chapter" EntityType="Self.Chapter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Countries" EntityType="Self.Countries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Expenses" EntityType="Self.Expenses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Feedback" EntityType="Self.Feedback" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ForFevPerUser" EntityType="Self.ForFevPerUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Options" EntityType="Self.Options" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RegionOfTheCountry" EntityType="Self.RegionOfTheCountry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SelectedBy" EntityType="Self.SelectedBy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SleepingComplexes" EntityType="Self.SleepingComplexes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TalkWith" EntityType="Self.TalkWith" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TravelDiary" EntityType="Self.TravelDiary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Trips" EntityType="Self.Trips" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserFavourites" EntityType="Self.UserFavourites" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WatchAt" EntityType="Self.WatchAt" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__AidComple__Optio__3C69FB99" Association="Self.FK__AidComple__Optio__3C69FB99">
+      <End Role="Options" EntitySet="Options" />
+      <End Role="AidComplexes" EntitySet="AidComplexes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Attractio__Optio__31EC6D26" Association="Self.FK__Attractio__Optio__31EC6D26">
+      <End Role="Options" EntitySet="Options" />
+      <End Role="Attractions" EntitySet="Attractions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chapter__TravelD__4222D4EF" Association="Self.FK__Chapter__TravelD__4222D4EF">
+      <End Role="TravelDiary" EntitySet="TravelDiary" />
+      <End Role="Chapter" EntitySet="Chapter" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Options__Favouri__2E1BDC42" Association="Self.FK__Options__Favouri__2E1BDC42">
+      <End Role="UserFavourites" EntitySet="UserFavourites" />
+      <End Role="Options" EntitySet="Options" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RegionOfT__Count__276EDEB3" Association="Self.FK__RegionOfT__Count__276EDEB3">
+      <End Role="Countries" EntitySet="Countries" />
+      <End Role="RegionOfTheCountry" EntitySet="RegionOfTheCountry" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SelectedB__Count__52593CB8" Association="Self.FK__SelectedB__Count__52593CB8">
+      <End Role="Countries" EntitySet="Countries" />
+      <End Role="SelectedBy" EntitySet="SelectedBy" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SelectedB__Feedb__5070F446" Association="Self.FK__SelectedB__Feedb__5070F446">
+      <End Role="Feedback" EntitySet="Feedback" />
+      <End Role="SelectedBy" EntitySet="SelectedBy" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SelectedB__Optio__4F7CD00D" Association="Self.FK__SelectedB__Optio__4F7CD00D">
+      <End Role="Options" EntitySet="Options" />
+      <End Role="SelectedBy" EntitySet="SelectedBy" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SelectedB__UserE__5165187F" Association="Self.FK__SelectedB__UserE__5165187F">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="SelectedBy" EntitySet="SelectedBy" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SleepingC__Optio__398D8EEE" Association="Self.FK__SleepingC__Optio__398D8EEE">
+      <End Role="Options" EntitySet="Options" />
+      <End Role="SleepingComplexes" EntitySet="SleepingComplexes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TalkWith__UserEm__5535A963" Association="Self.FK__TalkWith__UserEm__5535A963">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="TalkWith" EntitySet="TalkWith" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TalkWith__UserEm__5629CD9C" Association="Self.FK__TalkWith__UserEm__5629CD9C">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="TalkWith" EntitySet="TalkWith" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TravelDia__UserE__3F466844" Association="Self.FK__TravelDia__UserE__3F466844">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="TravelDiary" EntitySet="TravelDiary" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Trips__OptionsKe__35BCFE0A" Association="Self.FK__Trips__OptionsKe__35BCFE0A">
+      <End Role="Options" EntitySet="Options" />
+      <End Role="Trips" EntitySet="Trips" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UserFavou__Count__2B3F6F97" Association="Self.FK__UserFavou__Count__2B3F6F97">
+      <End Role="Countries" EntitySet="Countries" />
+      <End Role="UserFavourites" EntitySet="UserFavourites" />
+    </AssociationSet>
+    <AssociationSet Name="FK__UserFavou__UserE__2A4B4B5E" Association="Self.FK__UserFavou__UserE__2A4B4B5E">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UserFavourites" EntitySet="UserFavourites" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WatchAt__Country__4CA06362" Association="Self.FK__WatchAt__Country__4CA06362">
+      <End Role="Countries" EntitySet="Countries" />
+      <End Role="WatchAt" EntitySet="WatchAt" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WatchAt__UserEma__4BAC3F29" Association="Self.FK__WatchAt__UserEma__4BAC3F29">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="WatchAt" EntitySet="WatchAt" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

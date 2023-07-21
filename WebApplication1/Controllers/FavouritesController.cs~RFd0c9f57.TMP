@@ -1,0 +1,154 @@
+﻿using ClassLibrary1;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http;
+using WebApplication1.DTO;
+using NLog;
+using System.Web.Http.Cors;
+
+
+namespace WebApplication1.Controllers
+{
+    public class FavouritesController : ApiController
+    {
+        EnableCorsAttribute enableCorsAttribute = new EnableCorsAttribute("*", "*", "*");
+        
+        igroup199_prodEntities db = new igroup199_prodEntities();
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+        // GET api/<controller>
+        [HttpGet]
+        [Route("api/Favourites/Getall/{userwmailfromuser}")] // הדפסת כל המועדפים
+        public IHttpActionResult Getall(string userwmailfromuser)
+        {
+            try
+            {
+                List<UserFavourite> favourites = db.UserFavourites.Where(x=>x.UserEmail== userwmailfromuser).ToList();
+                List<Option> options = db.Options.ToList();
+                List<UserFavouritesDTO> userFavouritesDTOs = new List<UserFavouritesDTO>();
+                foreach (var item2 in options)
+                {
+                    if (item2.OptionsLikeDislike=="L")
+                    {
+                        foreach (UserFavourite item in favourites)
+                        {
+                            if (item.FavouritesKey==item2.FavouritesKey)
+                            {
+                                userFavouritesDTOs.Add(new UserFavouritesDTO
+                                {
+                                    FavouritesKeyDTO = item.FavouritesKey,
+                                    UserEmailDTO = item.UserEmail,
+                                    CountryNameDTO = item.CountryName,
+                                    UserFavouritesRegionOfTheCountryDTO = item.UserFavouritesRegionOfTheCountry,
+                                    TitelDTO = item.Titel,
+                                    DescriptionDTO = item.Description,
+                                });
+                            }
+                        }
+                    }
+                }
+                
+                logger.Info($"all UserFavourites was shown \n statusCode:{HttpStatusCode.OK}");
+                return Ok(userFavouritesDTOs);
+            }
+            catch (Exception)
+            {
+                logger.Error($"something went wrong! cant be found user favourites \n statusCode:{HttpStatusCode.NotFound}");
+                return NotFound();
+            }
+        }
+
+        [HttpGet]
+        [Route("api/Favourites/{FavKey}/GetByName")] // הדפסת מועדפים ספציפי
+        public IHttpActionResult GetByName(int FavKey)
+        {
+            try
+            {
+                List<UserFavourite> favourites = db.UserFavourites.ToList();
+                List<UserFavouritesDTO> userFavouritesDTOs = new List<UserFavouritesDTO>();
+                foreach (var item in favourites)
+                {
+                    if (item.FavouritesKey == FavKey)
+                    {
+                        userFavouritesDTOs.Add(new UserFavouritesDTO
+                        {
+                            FavouritesKeyDTO = item.FavouritesKey,
+                            UserEmailDTO = item.UserEmail,
+                            CountryNameDTO = item.CountryName,
+                            UserFavouritesRegionOfTheCountryDTO = item.UserFavouritesRegionOfTheCountry,
+                            TitelDTO = item.Titel,
+                            DescriptionDTO = item.Description,
+                        });
+                    }
+                }
+                logger.Info($"specific favourite was found \n statusCode:{HttpStatusCode.OK}");
+                return Ok(userFavouritesDTOs);
+            }
+            catch (Exception)
+            {
+                logger.Error($"something went wrong! cant be found favourite \n statusCode:{HttpStatusCode.NotFound}");
+                return NotFound();
+            }
+        }
+
+        // POST api/<controller>
+        public void Post([FromBody] string value)
+        {
+        }
+
+        // PUT api/<controller>/5
+        [HttpPut]
+        [Route("api/Favourites/{id}/PutFavourites")] // הוספת הפידבק לטבלה הרצויה
+        public IHttpActionResult PutFavourites(int id)
+        {
+            try
+            {
+                Option OptionFavouriteToDelete = db.Options.Where(x => x.FavouritesKey == id).FirstOrDefault();
+                if (OptionFavouriteToDelete.OptionsLikeDislike == "D")
+                {
+                    OptionFavouriteToDelete.OptionsLikeDislike = "L";
+                }
+                else
+                {
+                    OptionFavouriteToDelete.OptionsLikeDislike = "D";
+                }
+                logger.Info($"Favourite was update in DB \n statusCode:{HttpStatusCode.OK}");
+                return Ok();
+            }
+            catch (Exception)
+            {
+                logger.Error($"something went wrong! cant be found Favourite to delete \n statusCode:{HttpStatusCode.NotFound}");
+                return NotFound();
+            }
+        }
+
+        // DELETE api/<controller>/5
+        [HttpDelete]
+        [Route("api/Favourites/DeleteFavourites/{DeleteFavouritesIDfromdb}")] // מחיקת מועדף ספציפי
+        public IHttpActionResult DeleteFavourites(int DeleteFavouritesIDfromdb)
+        {
+            try
+            {
+                Option OptionFavouriteToDelete = db.Options.Where(x => x.FavouritesKey == DeleteFavouritesIDfromdb).FirstOrDefault();
+                if (OptionFavouriteToDelete.OptionsLikeDislike=="L")
+                {
+                    OptionFavouriteToDelete.OptionsLikeDislike = "D";
+                }
+                else
+                {
+                    OptionFavouriteToDelete.OptionsLikeDislike = "L";
+                }
+                db.SaveChanges();
+                logger.Info($"Favourite was update in DB \n statusCode:{HttpStatusCode.OK}");
+                return Ok();
+            }
+            catch (Exception)
+            {
+                logger.Error($"something went wrong! cant be found Favourite to delete \n statusCode:{HttpStatusCode.NotFound}");
+                return NotFound();
+            }
+        }
+    }
+}

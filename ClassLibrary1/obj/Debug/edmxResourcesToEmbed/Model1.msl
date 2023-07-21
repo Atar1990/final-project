@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="igroup199_prodModelStoreContainer" CdmEntityContainer="igroup199_prodEntities">
+    <EntitySetMapping Name="AidComplexes">
+      <EntityTypeMapping TypeName="igroup199_prodModel.AidComplex">
+        <MappingFragment StoreEntitySet="AidComplexes">
+          <ScalarProperty Name="AidComplexesKey" ColumnName="AidComplexesKey" />
+          <ScalarProperty Name="OptionsKey" ColumnName="OptionsKey" />
+          <ScalarProperty Name="AidComplexesOpenHours" ColumnName="AidComplexesOpenHours" />
+          <ScalarProperty Name="AidComplexesPhone" ColumnName="AidComplexesPhone" />
+          <ScalarProperty Name="AidComplexesName" ColumnName="AidComplexesName" />
+          <ScalarProperty Name="AidComplexesLocationCountry" ColumnName="AidComplexesLocationCountry" />
+          <ScalarProperty Name="AidComplexesLongitude" ColumnName="AidComplexesLongitude" />
+          <ScalarProperty Name="AidComplexesLatitude" ColumnName="AidComplexesLatitude" />
+          <ScalarProperty Name="AidComplexesFinallandmark" ColumnName="AidComplexesFinallandmark" />
+          <ScalarProperty Name="AidComplexesPersona" ColumnName="AidComplexesPersona" />
+          <ScalarProperty Name="AidComplexesDescription" ColumnName="AidComplexesDescription" />
+          <ScalarProperty Name="AidComplexesPhoto" ColumnName="AidComplexesPhoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attractions">
+      <EntityTypeMapping TypeName="igroup199_prodModel.Attraction">
+        <MappingFragment StoreEntitySet="Attractions">
+          <ScalarProperty Name="AttractionsKey" ColumnName="AttractionsKey" />
+          <ScalarProperty Name="OptionsKey" ColumnName="OptionsKey" />
+          <ScalarProperty Name="KindOfAttraction" ColumnName="KindOfAttraction" />
+          <ScalarProperty Name="AttractionsTimeInMinutes" ColumnName="AttractionsTimeInMinutes" />
+          <ScalarProperty Name="AttractionsCost" ColumnName="AttractionsCost" />
+          <ScalarProperty Name="NumberOfRepeatAttractions" ColumnName="NumberOfRepeatAttractions" />
+          <ScalarProperty Name="AttractionsName" ColumnName="AttractionsName" />
+          <ScalarProperty Name="AttractionsLocationCountry" ColumnName="AttractionsLocationCountry" />
+          <ScalarProperty Name="AttractionsRegionOfTheCountry" ColumnName="AttractionsRegionOfTheCountry" />
+          <ScalarProperty Name="AttractionsLongitude" ColumnName="AttractionsLongitude" />
+          <ScalarProperty Name="AttractionsLatitude" ColumnName="AttractionsLatitude" />
+          <ScalarProperty Name="AttractionsFinallandmark" ColumnName="AttractionsFinallandmark" />
+          <ScalarProperty Name="AttractionsPersona" ColumnName="AttractionsPersona" />
+          <ScalarProperty Name="AttractionDescription" ColumnName="AttractionDescription" />
+          <ScalarProperty Name="AttractionPhoto" ColumnName="AttractionPhoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chapters">
+      <EntityTypeMapping TypeName="igroup199_prodModel.Chapter">
+        <MappingFragment StoreEntitySet="Chapter">
+          <ScalarProperty Name="NameOfChapter" ColumnName="NameOfChapter" />
+          <ScalarProperty Name="TravelDiaryKey" ColumnName="TravelDiaryKey" />
+          <ScalarProperty Name="ChapterDescription" ColumnName="ChapterDescription" />
+          <ScalarProperty Name="ChapterPictures" ColumnName="ChapterPictures" />
+          <ScalarProperty Name="ChapterDate" ColumnName="ChapterDate" />
+          <ScalarProperty Name="ChapterTime" ColumnName="ChapterTime" />
+          <ScalarProperty Name="ChapterKey" ColumnName="ChapterKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="igroup199_prodModel.Country">
+        <MappingFragment StoreEntitySet="Countries">
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="CountryMainland" ColumnName="CountryMainland" />
+          <ScalarProperty Name="CountryLat" ColumnName="CountryLat" />
+          <ScalarProperty Name="CountryLon" ColumnName="CountryLon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expenses">
+      <EntityTypeMapping TypeName="igroup199_prodModel.Expens">
+        <MappingFragment StoreEntitySet="Expenses">
+          <ScalarProperty Name="ExpensesKey" ColumnName="ExpensesKey" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="KindOfExpenses" ColumnName="KindOfExpenses" />
+          <ScalarProperty Name="ExpensesTitle" ColumnName="ExpensesTitle" />
+          <ScalarProperty Name="PricePerOne" ColumnName="PricePerOne" />
+          <ScalarProperty Name="NumberOfRepeatExpenses" ColumnName="NumberOfRepeatExpenses" />
+          <ScalarProperty Name="TotalPriceToPay" ColumnName="TotalPriceToPay" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Feedbacks">
+      <EntityTypeMapping TypeName="igroup199_prodModel.Feedback">
+        <MappingFragment StoreEntitySet="Feedback">
+          <ScalarProperty Name="FeedbackKey" ColumnName="FeedbackKey" />
+          <ScalarProperty Name="KindOfFeedback" ColumnName="KindOfFeedback" />
+          <ScalarProperty Name="FeedbackDescription" ColumnName="FeedbackDescription" />
+          <ScalarProperty Name="FeedbackLongitude" ColumnName="FeedbackLongitude" />
+          <ScalarProperty Name="FeedbackLatitude" ColumnName="FeedbackLatitude" />
+          <ScalarProperty Name="FeedbackCountry" ColumnName="FeedbackCountry" />
+          <ScalarProperty Name="FeedbackRegionOfTheCountry" ColumnName="FeedbackRegionOfTheCountry" />
+          <ScalarProperty Name="FeedbackTitle" ColumnName="FeedbackTitle" />
+          <ScalarProperty Name="FeedbackPhoto" ColumnName="FeedbackPhoto" />
+          <ScalarProperty Name="FeedbackPersona" ColumnName="FeedbackPersona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ForFevPerUsers">
+      <EntityTypeMapping TypeName="igroup199_prodModel.ForFevPerUser">
+        <MappingFragment StoreEntitySet="ForFevPerUser">
+          <ScalarProperty Name="Fkey" ColumnName="Fkey" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="Fcontry" ColumnName="Fcontry" />
+          <ScalarProperty Name="Flat" ColumnName="Flat" />
+          <ScalarProperty Name="Flot" ColumnName="Flot" />
+          <ScalarProperty Name="Fdescription" ColumnName="Fdescription" />
+          <ScalarProperty Name="Fphoto" ColumnName="Fphoto" />
+          <ScalarProperty Name="Fuseremail" ColumnName="Fuseremail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Options">
+      <EntityTypeMapping TypeName="igroup199_prodModel.Option">
+        <MappingFragment StoreEntitySet="Options">
+          <ScalarProperty Name="OptionsKey" ColumnName="OptionsKey" />
+          <ScalarProperty Name="FavouritesKey" ColumnName="FavouritesKey" />
+          <ScalarProperty Name="OptionsLikeDislike" ColumnName="OptionsLikeDislike" />
+          <ScalarProperty Name="OptionName" ColumnName="OptionName" />
+          <ScalarProperty Name="OptionLocationCountry" ColumnName="OptionLocationCountry" />
+          <ScalarProperty Name="OptionsRegionOfTheCountry" ColumnName="OptionsRegionOfTheCountry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RegionOfTheCountries">
+      <EntityTypeMapping TypeName="igroup199_prodModel.RegionOfTheCountry">
+        <MappingFragment StoreEntitySet="RegionOfTheCountry">
+          <ScalarProperty Name="RegionOfTheCountryKey" ColumnName="RegionOfTheCountryKey" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="RegionOfTheCountry1" ColumnName="RegionOfTheCountry" />
+          <ScalarProperty Name="RegionOfTheCountryLat" ColumnName="RegionOfTheCountryLat" />
+          <ScalarProperty Name="RegionOfTheCountryLon" ColumnName="RegionOfTheCountryLon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SelectedBies">
+      <EntityTypeMapping TypeName="igroup199_prodModel.SelectedBy">
+        <MappingFragment StoreEntitySet="SelectedBy">
+          <ScalarProperty Name="OptionsKey" ColumnName="OptionsKey" />
+          <ScalarProperty Name="FeedbackKey" ColumnName="FeedbackKey" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SleepingComplexes">
+      <EntityTypeMapping TypeName="igroup199_prodModel.SleepingComplex">
+        <MappingFragment StoreEntitySet="SleepingComplexes">
+          <ScalarProperty Name="SleepingComplexesKey" ColumnName="SleepingComplexesKey" />
+          <ScalarProperty Name="OptionsKey" ColumnName="OptionsKey" />
+          <ScalarProperty Name="SleepingComplexesCost" ColumnName="SleepingComplexesCost" />
+          <ScalarProperty Name="NumberOfNightsSleepingComplexes" ColumnName="NumberOfNightsSleepingComplexes" />
+          <ScalarProperty Name="SleepingComplexesName" ColumnName="SleepingComplexesName" />
+          <ScalarProperty Name="SleepingComplexesLocationCountry" ColumnName="SleepingComplexesLocationCountry" />
+          <ScalarProperty Name="SleepingComplexesRegionOfTheCountry" ColumnName="SleepingComplexesRegionOfTheCountry" />
+          <ScalarProperty Name="SleepingComplexesLongitude" ColumnName="SleepingComplexesLongitude" />
+          <ScalarProperty Name="SleepingComplexesLatitude" ColumnName="SleepingComplexesLatitude" />
+          <ScalarProperty Name="SleepingComplexesFinallandmark" ColumnName="SleepingComplexesFinallandmark" />
+          <ScalarProperty Name="SleepingComplexesPersona" ColumnName="SleepingComplexesPersona" />
+          <ScalarProperty Name="SleepingComplexesDescription" ColumnName="SleepingComplexesDescription" />
+          <ScalarProperty Name="SleepingComplexesPhoto" ColumnName="SleepingComplexesPhoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TalkWiths">
+      <EntityTypeMapping TypeName="igroup199_prodModel.TalkWith">
+        <MappingFragment StoreEntitySet="TalkWith">
+          <ScalarProperty Name="UserEmail1" ColumnName="UserEmail1" />
+          <ScalarProperty Name="UserEmail2" ColumnName="UserEmail2" />
+          <ScalarProperty Name="ChatDate" ColumnName="ChatDate" />
+          <ScalarProperty Name="ChatTime" ColumnName="ChatTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TravelDiaries">
+      <EntityTypeMapping TypeName="igroup199_prodModel.TravelDiary">
+        <MappingFragment StoreEntitySet="TravelDiary">
+          <ScalarProperty Name="TravelDiaryKey" ColumnName="TravelDiaryKey" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="NumberOfChapters" ColumnName="NumberOfChapters" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trips">
+      <EntityTypeMapping TypeName="igroup199_prodModel.Trip">
+        <MappingFragment StoreEntitySet="Trips">
+          <ScalarProperty Name="TripsKey" ColumnName="TripsKey" />
+          <ScalarProperty Name="OptionsKey" ColumnName="OptionsKey" />
+          <ScalarProperty Name="KindOfTrips" ColumnName="KindOfTrips" />
+          <ScalarProperty Name="TripsTimeInMinutes" ColumnName="TripsTimeInMinutes" />
+          <ScalarProperty Name="TripsCost" ColumnName="TripsCost" />
+          <ScalarProperty Name="NumberOfRepeatTrips" ColumnName="NumberOfRepeatTrips" />
+          <ScalarProperty Name="TripsName" ColumnName="TripsName" />
+          <ScalarProperty Name="TripsLocationCountry" ColumnName="TripsLocationCountry" />
+          <ScalarProperty Name="TripsRegionOfTheCountry" ColumnName="TripsRegionOfTheCountry" />
+          <ScalarProperty Name="TripsLongitude" ColumnName="TripsLongitude" />
+          <ScalarProperty Name="TripsLatitude" ColumnName="TripsLatitude" />
+          <ScalarProperty Name="TripsFinallandmark" ColumnName="TripsFinallandmark" />
+          <ScalarProperty Name="TripsPersona" ColumnName="TripsPersona" />
+          <ScalarProperty Name="TripsDescription" ColumnName="TripsDescription" />
+          <ScalarProperty Name="TripsPhoto" ColumnName="TripsPhoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserFavourites">
+      <EntityTypeMapping TypeName="igroup199_prodModel.UserFavourite">
+        <MappingFragment StoreEntitySet="UserFavourites">
+          <ScalarProperty Name="FavouritesKey" ColumnName="FavouritesKey" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+          <ScalarProperty Name="UserFavouritesRegionOfTheCountry" ColumnName="UserFavouritesRegionOfTheCountry" />
+          <ScalarProperty Name="Titel" ColumnName="Titel" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="igroup199_prodModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
+          <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />
+          <ScalarProperty Name="NumberOfFriends" ColumnName="NumberOfFriends" />
+          <ScalarProperty Name="UserPhoneNumber" ColumnName="UserPhoneNumber" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserImg" ColumnName="UserImg" />
+          <ScalarProperty Name="UserBudget" ColumnName="UserBudget" />
+          <ScalarProperty Name="UserTimeTraveling" ColumnName="UserTimeTraveling" />
+          <ScalarProperty Name="UserLatPosition" ColumnName="UserLatPosition" />
+          <ScalarProperty Name="UserLotPosition" ColumnName="UserLotPosition" />
+          <ScalarProperty Name="UserTimeSpan" ColumnName="UserTimeSpan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="WatchAt" TypeName="igroup199_prodModel.WatchAt" StoreEntitySet="WatchAt">
+      <EndProperty Name="Countries">
+        <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+      </EndProperty>
+      <EndProperty Name="Users">
+        <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
