@@ -1,0 +1,36 @@
+.create-episode {
+  padding: 0 30px;
+}
+
+.episode-content{
+  text-align: center;
+}
+.input-container {
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  margin-left: 15px;
+
+}
+
+
+.input-container input {
+  margin-left: 15px;
+}
+
+label {
+  margin-left: 15px;
+}
+
+@media (max-width: 450px) {
+  form {
+    width: 100%;
+  }
+}
+.Feedback-title{
+  font-size: 10px;
+}
+.btn-create{
+  background-color: #598e89;
+}
+

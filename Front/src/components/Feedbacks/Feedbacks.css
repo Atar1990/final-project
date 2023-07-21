@@ -1,0 +1,65 @@
+/* .episodes-page {
+  padding: 0 20px;
+}
+
+.episodes {
+}
+
+.episode-time {
+  display: flex;
+  justify-content: space-between;
+}
+
+.episode-title {
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+.episode-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.btns {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.episode-desc {
+  line-break: anywhere;
+} */
+.Feedback-title2{
+  text-align: center;
+  font-size: 22px;
+  padding-top: 5px;
+  color: black;
+}
+.Feedback-title3{
+  text-align: center;
+  font-size: 17px;
+  padding-top: 5px;
+  color: black;
+  padding: 20px;
+  font-weight: 100;
+}
+.css-1knaqv7-MuiButtonBase-root-MuiButton-root{
+  color: #598e89 !important;
+  font-weight: bold !important;
+}
+.cardimg2{
+  height: 160px;
+  display: flex !important;
+  
+}
+.cardstyle2{
+  background-color: rgb(245 245 244) !important;
+}

@@ -1,0 +1,23 @@
+.diary {
+  padding: 0 85px;
+}
+
+.book-image2 {
+  width: 230px;
+  margin: 15px 0;
+  padding-top: 20px;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+}
+
+
+.btn{
+    margin: 15px !important;
+    /* background-color: #598e89 !important; */
+    height: 70px !important;
+    width: 60px !important;
+    padding: 10px !important;
+}

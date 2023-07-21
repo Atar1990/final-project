@@ -1,0 +1,17 @@
+.chat-page .chat {
+    width: 100%;
+    margin-bottom: 15px;
+    direction: rtl;
+}
+
+.unread span{
+    font-weight: bold;
+    color: black;
+    padding-top: 10px;
+}
+.unread{
+    font-weight: bold;
+    border: 3px solid  #598e89;
+    border-radius: 40px 40px;
+    padding-top: 10px;
+}

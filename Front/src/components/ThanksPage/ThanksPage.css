@@ -1,0 +1,30 @@
+.thanks {
+    padding: 0 100px;
+  }
+  
+  .book-image {
+    width: 150px;
+    margin: 15px 0;
+    padding-top: 10px;
+  }
+  
+  .btns {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .btn{
+      margin: 15px !important;
+      background-color: #598e89 !important;
+  }
+  
+  .desc{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+  }
+
+.btn-create{
+  background-color: #598e89;
+}

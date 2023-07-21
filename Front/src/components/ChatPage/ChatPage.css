@@ -1,0 +1,76 @@
+.chat-page {
+    width: 100%;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.txt-input {
+    position: fixed !important;
+    display: block !important;
+    bottom: 55px;
+    width: 90%;
+    right: 10% !important;
+}
+
+.css-dpjnhs-MuiInputBase-root-MuiOutlinedInput-root {
+    border-radius: 22px;
+    width: 70%;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+    border: 1px black !important;
+    
+}
+
+.message {
+    border-radius: 15px;
+    width: fit-content;
+    display: flex;
+    margin-bottom: 10px;
+
+}
+
+.right-message {
+    align-self: flex-start;
+    padding: 3px 15px 3px 5px;
+    background-color: #598e89;
+    border-radius: 20px 20px 20px 5px;
+}
+
+.left-message {
+    align-self: flex-end;
+    padding: 3px 15px 3px 5px;
+    background-color: #e0e0e0;
+    border-radius: 20px 20px 5px 20px;
+    flex-direction: row-reverse;
+}
+
+.time {
+    font-size: 12px;
+    margin-top: auto;
+    color: darkgray;
+    display: block;
+}
+
+.left-time {
+    margin-left: 8px;
+    margin-right: 5px;
+}
+
+.right-time {
+    margin-right: 5px;
+    margin-left: 8px;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    background-color: red !important; 
+}
+.divb{
+    background-color: red !important;
+    
+}

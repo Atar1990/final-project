@@ -1,0 +1,60 @@
+.episodes-page {
+  padding: 20px 20px 60px 20px;
+  font-family: Roboto, Helvetica, Arial, sans-serif !important;
+
+}
+
+.episode-time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-family: Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+.episode-title {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Roboto, Helvetica, Arial, sans-serif !important;
+  /* background-color: rgb(238, 238, 238); */
+}
+
+.episode-content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, Helvetica, Arial, sans-serif !important;
+
+}
+
+.title{
+  font-size: 30px;
+  font-family: Roboto, Helvetica, Arial, sans-serif !important;
+
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  font-family: Roboto, Helvetica, Arial, sans-serif !important;
+}
+img {
+  width: 100px;
+  height: 150px;
+
+}
+
+.episode-desc {
+  font-size: 15px;
+  
+
+
+}
+.episode-PIC{
+  width: 100%;
+  height: 45%;
+
+}
+.btn2{
+  background-color: rgb(238, 238, 238);
+}
+

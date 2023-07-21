@@ -1,0 +1,82 @@
+.create-episode {
+  padding: 0 30px;
+}
+
+.input-container {
+  width: fit-content;
+  /* margin-bottom: 15px; */
+  display: flex;
+  /* margin-left: 15px; */
+  padding: 10px;
+  color: black;
+  direction: rtl;
+  text-align: right;
+  margin: auto;
+  float: right;
+  
+}
+
+.css-wb57ya-MuiFormControl-root-MuiTextField-root{
+max-width: 200px;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+direction: rtl;
+}
+
+.imginput{
+  margin: auto;
+  
+}
+.input-container input {
+   margin-left: 15px; 
+  padding: 5px;
+}
+
+ label {
+  margin-left: 15px;
+  margin-top: 5px;
+} 
+
+#fullWidth {
+  padding: 20px;
+  width: 90%;
+  direction: rtl;
+}
+
+#fullWidthName {
+  padding: 20px; 
+  direction: rtl;
+}
+
+.title {
+  padding: 10px;
+  padding-bottom: 10px;
+  direction: rtl;
+}
+
+@media (max-width: 360px) {
+  form {
+    width: 100%;
+  }
+}
+
+p{
+  color: black;
+}
+.input-container-button{
+  align-items: flex-end;
+  text-align: center;
+  margin: auto;
+}
+.book-image3{
+  width: 100px;
+  margin: 15px 0px;
+  padding-top: 30px;
+}
+.sty{
+  background-color: rgb(238, 238, 238);
+}
+.pp{
+  font-size: 17px;
+}

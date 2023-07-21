@@ -1,0 +1,37 @@
+.episode-page .episode-content {
+    margin-bottom: 15px;
+    width: 100%;
+    font-family: Roboto, Helvetica, Arial, sans-serif !important;
+
+}
+
+.episode-page .episode-title {
+    margin-bottom: 15px;
+    width: 100%;
+    font-family: Roboto, Helvetica, Arial, sans-serif !important;
+
+}
+
+
+.episode-desc {
+    padding: 16px;
+    color: black;
+    font-family: Roboto, Helvetica, Arial, sans-serif !important;
+    text-align: right;
+    direction: rtl;
+
+}
+
+.episode-page .episode-img {
+    margin-top: 15px;
+    width: 80%;
+    height: 180px;
+
+}
+
+.episode-page {
+    margin-top: 10px;
+    width: 95%;
+    font-family: Roboto, Helvetica, Arial, sans-serif !important;
+
+}

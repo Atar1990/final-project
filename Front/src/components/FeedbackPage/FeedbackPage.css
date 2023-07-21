@@ -1,0 +1,64 @@
+.feedbackpage {
+    font-size: 15px;
+}
+
+.Feedback-title3 {
+    text-align: right;
+    font-size: 17px;
+    flex-direction: row-reverse !important;
+    width: 200px;
+    margin: 0%;
+   
+}
+
+.Feedback-title4 {
+    text-align: right;
+    font-size: 14px;
+    margin: 0%;
+}
+
+.Feedback-title5 {
+    text-align: right;
+    font-size: 17px;
+    margin: 0%;
+
+}
+
+.cardimg {
+    height: 160px;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.greydiv {
+    background-color: rgb(245 245 244) !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px 40px;
+}
+
+
+
+.title2 {
+    text-align: center !important;
+    font-size: 20px;
+    padding-top:15px;
+    padding-bottom:15px;
+    color: black;
+    align-items: center;
+    margin: 0%;
+}
+
+.rigt {
+    text-align: right !important;
+    flex-direction: row-reverse !important;
+    font-size: 12px !important;
+    margin: 0%;
+}
+
+.diva {
+    width: 100%;
+}
