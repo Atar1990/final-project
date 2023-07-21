@@ -34,15 +34,3 @@ C:\Users\Noych\OneDrive\שולחן העבודה\ClassLibrary1\ClassLibrary1\obj\
 C:\Users\Noych\OneDrive\שולחן העבודה\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CopyComplete
 C:\Users\Noych\OneDrive\שולחן העבודה\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 C:\Users\Noych\OneDrive\שולחן העבודה\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
-C:\Users\atarn\Downloads\ClassLibraryFINAL\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll.config
-C:\Users\atarn\Downloads\ClassLibraryFINAL\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
-C:\Users\atarn\Downloads\ClassLibraryFINAL\ClassLibrary1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
-C:\Users\atarn\Downloads\ClassLibraryFINAL\ClassLibrary1\ClassLibrary1\bin\Debug\EntityFramework.dll
-C:\Users\atarn\Downloads\ClassLibraryFINAL\ClassLibrary1\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\atarn\Downloads\ClassLibraryFINAL\ClassLibrary1\ClassLibrary1\bin\Debug\EntityFramework.xml
-C:\Users\atarn\Downloads\ClassLibraryFINAL\ClassLibrary1\ClassLibrary1\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\atarn\Downloads\ClassLibraryFINAL\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.AssemblyReference.cache
-C:\Users\atarn\Downloads\ClassLibraryFINAL\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CoreCompileInputs.cache
-C:\Users\atarn\Downloads\ClassLibraryFINAL\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.csproj.CopyComplete
-C:\Users\atarn\Downloads\ClassLibraryFINAL\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
-C:\Users\atarn\Downloads\ClassLibraryFINAL\ClassLibrary1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

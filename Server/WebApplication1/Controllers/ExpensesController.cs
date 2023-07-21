@@ -520,59 +520,15 @@ namespace WebApplication1.Controllers
 
 
                     /// ATAR START
-                    var usersForSimilarity = db.Expenses.Select(e => new UserExpense(){
-                        UserId = e.UserEmail,
-                        ExpenseType= e.KindOfExpenses,
-                         Price = e.TotalPriceToPay}).ToList();
-
-                    var allUsers = db.Users.Select(e => e).ToList();
-                    var newSimilar = new UserExpense[] { };
-                    
-                    foreach (var item in allUsers)
+                    var usersForSimilarity = db.Expenses.Select(e => new UserExpense
                     {
+                        UserId = e.UserEmail,
+                        ExpenseType = e.KindOfExpenses,
+                        Price = e.TotalPriceToPay
 
-                        ArrayExtensions.Push(newSimilar, new UserExpense()
-                        {
-                            UserId = item.UserEmail,
-                            ExpenseType = "אטרקציות",
-                            Price = usersForSimilarity.Where(e => e.ExpenseType == "אטרקציות" && item.UserEmail == e.UserId).Sum(e => e.Price)
-                        });
-                        ArrayExtensions.Push(newSimilar, new UserExpense()
-                        {
-                            UserId = item.UserEmail,
-                            ExpenseType = "בילויים",
-                            Price = usersForSimilarity.Where(e => e.ExpenseType == "בילויים" && item.UserEmail == e.UserId).Sum(e => e.Price)
-                        });
-                        ArrayExtensions.Push(newSimilar, new UserExpense()
-                        {
-                            UserId = item.UserEmail,
-                            ExpenseType = "הימורים",
-                            Price = usersForSimilarity.Where(e => e.ExpenseType == "הימורים" && item.UserEmail == e.UserId).Sum(e => e.Price)
-                        });
-                        ArrayExtensions.Push(newSimilar, new UserExpense()
-                        {
-                            UserId = item.UserEmail,
-                            ExpenseType = "מזון",
-                            Price = usersForSimilarity.Where(e => e.ExpenseType == "מזון" && item.UserEmail == e.UserId).Sum(e => e.Price)
-                        });
-                        ArrayExtensions.Push(newSimilar, new UserExpense()
-                        {
-                            UserId = item.UserEmail,
-                            ExpenseType = "סמים",
-                            Price = usersForSimilarity.Where(e => e.ExpenseType == "סמים" && item.UserEmail == e.UserId).Sum(e => e.Price)
-                        });
-                        ArrayExtensions.Push(newSimilar, new UserExpense()
-                        {
-                            UserId = item.UserEmail,
-                            ExpenseType = "לינה",
-                            Price = usersForSimilarity.Where(e => e.ExpenseType == "לינה" && item.UserEmail == e.UserId).Sum(e => e.Price)
-                        });
-
-                    }
-
-
+                    }).ToList();
                     var calculator = new UserSimilarityCalculator();
-                    var similarity = calculator.CalculateSimilarity(newSimilar.ToList(), email);
+                    var similarity = calculator.CalculateSimilarity(usersForSimilarity, email);
                     var usersIds = similarity.Where(u => u.Value > 0.9 && u.Value <= 1).Select(u => u.Key);
                     //// ATAR END
 
@@ -677,20 +633,5 @@ namespace WebApplication1.Controllers
 
 
 
-    }
-}
-
-public static class ArrayExtensions
-{
-    public static int Push<T>(this T[] source, T value)
-    {
-        var index = Array.IndexOf(source, default(T));
-
-        if (index != -1)
-        {
-            source[index] = value;
-        }
-
-        return index;
     }
 }
